@@ -48,6 +48,7 @@
     "shadow"        : true,     // Allows re-define variables later in code e.g. `var x=1; x=2;`.
     "sub"           : true,     // Tolerate all forms of subscript notation besides dot notation e.g. `dict['key']` instead of `dict.key`.
     "supernew"      : true,     // Tolerate `new function () { ... };` and `new Object;`.
+    "undef"         : true,     // lint for using variables before they're defined
     "validthis"     : false,    // Tolerate strict violations when the code is running in strict mode and you use this in a non-constructor function.
     
     // == Environments ====================================================
@@ -57,12 +58,10 @@
     // browser or node.js.
     
     "browser"       : true,     // Standard browser globals e.g. `window`, `document`.
+    "devel"         : true,     // Permit globals defined by the browser
     "couch"         : false,    // Enable globals exposed by CouchDB.
-    "devel"         : false,    // Allow development statements e.g. `console.log();`.
     "dojo"          : false,    // Enable globals exposed by Dojo Toolkit.
-    "jquery"        : false,    // Enable globals exposed by jQuery JavaScript library.
-    "mootools"      : false,    // Enable globals exposed by MooTools JavaScript framework.
-    "node"          : false,    // Enable globals available when code is running inside of the NodeJS runtime environment.
+    "node"          : true,     // Enable globals available when code is running inside of the NodeJS runtime environment.
     "nonstandard"   : false,    // Define non-standard but widely adopted globals such as escape and unescape.
     "prototypejs"   : false,    // Enable globals exposed by Prototype JavaScript framework.
     "rhino"         : false,    // Enable globals available when your code is running inside of the Rhino runtime environment.
@@ -71,5 +70,8 @@
     "-W008"         : true,     // A leading decimal point can be confused with a dot
     "-W065"         : true,     // Missing radix parameter
     "-W092"         : true,     // Wrap the /regexp/ literal in parens to disambiguate the slash operator
-    "-W107"         : true      // Script URL
+    "-W107"         : true,     // Script URL
+    "-W093"         : false,    // Allow returning the results of assignments
+    "globals"       : {"mixpanel": false, "_gaq": false, "phantom": false,
+                       "define": false, "pageData": false, "FB": false}
 }
