@@ -60,11 +60,7 @@ _DEFAULT_EXTRA_LINTER = '<ancestor>/tools/runlint.py'
 # TODO(csilvers): move python stuff to its own file, so this file
 # is just the driver.
 
-# W291 trailing whitespace
-# W293 blank line contains whitespace
-# W391 blank line at end of file
-_DEFAULT_PEP8_ARGS = ['--repeat',
-                      '--ignore=W291,W293,W391']
+_DEFAULT_PEP8_ARGS = ['--repeat']
 
 
 class Linter(object):
