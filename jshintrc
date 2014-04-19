@@ -74,5 +74,6 @@
     "wsh"           : false,    // Enable globals available when your code is running as a script for the Windows Script Host.
 
     "globals"       : { "mixpanel": false, "_gaq": false, "phantom": false,
-                       "define": false, "pageData": false, "FB": false }
+                       "define": false, "pageData": false, "FB": false,
+                       "it": false, "describe": false }
 }
